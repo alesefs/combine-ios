@@ -1,2 +1,2 @@
-# combine-ios
-game Tapple iOS distribuition
+# Combine-iOS
+game Combine iOS distribuition
