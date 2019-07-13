@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="manifest" href="manifest.json">
+
+    <title>AVI1</title>
+
+    <style type="text/css">
+		body
+		{
+			padding: 0;
+			margin: 0;
+			overflow: hidden;
+			background-color: #202020;
+		}
+
+		#superCard
+		{
+			position: absolute;
+			width: calc(100% - 10px);
+			height: calc(100% - 10px);
+			margin: 5px;
+
+			/*border: 5px solid rgba(0, 0, 0, 0.3);
+			box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);*/
+		    box-sizing: border-box;
+		    -moz-border-radius: 20px;
+		    -webkit-border-radius: 20px;
+		    border-radius: 20px;
+
+
+		    background-color: lime;
+		    background: -webkit-linear-gradient(to left top, lime, chartreuse, lightgreen);
+		    background: -o-linear-gradient(to left top, lime, chartreuse, lightgreen);
+		    background: -moz-linear-gradient(to left top, lime, chartreuse, lightgreen);
+		    background: linear-gradient(to left top, lime, chartreuse, lightgreen);
+		}
+
+		#mid-cnte
+		{
+			position: absolute;
+			width: 640px;
+			height: 80px;
+			top: 0;
+			bottom: 80px;
+			left: 0;
+			right: 0;
+			margin: auto;
+
+			background-color: transparent;
+
+			font-size: 80px;
+			text-align: center;
+		}
+
+		#bot-cnte
+		{
+			position: absolute;
+			width: 640px;
+			height: 50px;
+			top: 50px;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			margin: auto;
+
+			background-color: transparent;
+
+			font-size: 50px;
+			text-align: center;
+		}
+
+		@media (orientation: portrait) and (max-width: 640px)
+		{
+			#mid-cnte, #bot-cnte
+			{
+			    -ms-transform: rotate(90deg);
+			    -webkit-transform: rotate(90deg);
+			    transform: rotate(90deg);
+			}
+
+			#mid-cnte
+			{
+				width: 300px;
+				height: 40px;
+				left: 40px;
+				bottom: 0;
+
+				font-size: 40px;
+			}
+
+			#bot-cnte
+			{
+				width: 320px;
+				height: 20px;
+				right: 20px;
+				top: 0;
+
+				font-size: 20px;
+			}
+		}
+
+		@media (orientation: landscape) and (max-width: 640px)
+		{
+			#mid-cnte
+			{
+				width: 300px;
+				height: 40px;
+				left: 0;
+				bottom: 40px;
+
+				font-size: 40px;
+			}
+
+			#bot-cnte
+			{
+				width: 320px;
+				height: 20px;
+				right: 0;
+				top: 20px;
+
+				font-size: 20px;
+			}
+		}
+/*
+		@media (max-width: 640px) {
+			#mid-cnte
+			{
+				font-size: 40px;
+			}
+
+			#bot-cnte
+			{
+				font-size: 20px;
+			}
+		}
+*/
+	</style>
+</head>
+
+<body>
+<div id="superCard">
+    <div id="cnte">
+        <div id="mid-cnte">OLÁ</div>
+        <div id="bot-cnte">OLÁ</div>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+		var txt = "";
+		if (navigator.userAgent.match(/Windows Phone|IEMobile|Lumia/i)) {
+		    txt = "WinPhone";
+		} else if (navigator.userAgent.match(/Android/i)) {
+		    txt = "android";
+		} else if (navigator.userAgent.match(/iPhone|iPad|iPod/i)) {
+		    txt = "ios";
+		} else {
+		    txt = "Unknow";
+		}
+
+		document.getElementById("mid-cnte").innerHTML = txt;
+		/*document.getElementById("bot-cnte").innerHTML = window.navigator.standalone;
+		$(document).ready(function() { $("#mid-cnte").html(txt); });*/
+	</script>
+</body>
+</html>

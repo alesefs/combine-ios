@@ -1,0 +1,108 @@
+@font-face {font-family: 'SirinStencil-Regular'; src: url(fnt/SirinStencil-Regular.ttf); }
+
+
+html, body{
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+    background: #333333;
+    color: white;
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    /*padding-top: constant(safe-area-inset-top);
+    padding: constant(safe-area-inset-top) constant(safe-area-inset-right) constant(safe-area-inset-bottom) constant(safe-area-inset-left);
+    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);*/
+}
+
+canvas {
+    padding-top: env(safe-area-inset-top);
+}
+
+#banner {
+    position: absolute;
+    width: 100%;
+    height: 55px;
+    bottom: env(safe-area-inset-bottom);
+    bottom: 0;
+
+    background: #114EA0 url(img/ads/TAPPLEban55.png) center no-repeat;
+
+    border-top: 5px solid rgba(0,0,0,0.8);
+
+    -webkit-box-shadow: inset 0 20px 20px -20px rgba(0,0,0,0.8);
+    -moz-box-shadow: inset 0 20px 20px -20px rgba(0,0,0,0.8);
+    box-shadow: inset 0 20px 20px -20px rgba(0,0,0,0.8);
+    box-sizing: border-box;
+}
+
+#mask {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background: rgba(0,0,0,0.8);
+}
+
+#inter {
+    position: absolute;
+    width: 280px;
+    height: 420px;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background: #114EA0 url(img/ads/TAPPLEint480.png) center no-repeat;
+
+    border: 3px solid rgba(0,0,0,0.2);
+
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0,0,0,0.75), 0 6px 20px 0 rgba(0, 0, 0, 0.7);
+    -moz-box-shadow: 0 4px 8px 0 rgba(0,0,0,0.75), 0 6px 20px 0 rgba(0, 0, 0, 0.7);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.75), 0 6px 20px 0 rgba(0, 0, 0, 0.7);
+    box-sizing: border-box;
+}
+
+#close {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    left: 85%;
+    top: 2.5%;
+    color: white;
+    background: red;
+    z-index: 90000;
+
+    font-size: 20px;
+    text-align: center;
+    font-family: arial;
+
+    box-sizing: border-box;
+    border-radius: 50%;
+    border: 2px darkgray double;
+}
+
+@media screen and (min-width: 600px) {
+    #banner {
+        height: 95px;
+        background: #114EA0 url(img/ads/TAPPLEban95.png) center no-repeat;
+    }
+
+    #inter {
+        width: 480px;
+        height: 600px;
+        background: #114EA0 url(img/ads/TAPPLEint600.png) center no-repeat;
+    }
+
+    #close {
+        width: 50px;
+        height: 50px;
+        font-size: 35px;
+    }
+}

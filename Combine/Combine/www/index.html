@@ -1,0 +1,178 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover" />
+        <meta name="description" content="[Pt-Br] Combine.
+            [En] Combine.">
+        <meta name="keywords" content="Combine, tapple, hotscotch, amarelinha, kids, colorful, cor, formas, alesefs, alesefsApps, connectic, mobile game, phaser, HTML, indie, brasil, recife, colorido, flat, timer, dots, dynamic">
+        <meta name="author" content="Alessandro Emanuel - alesefs.github.io">
+        <meta name="robots" content="Index,Follow" />
+        <link rel="icon" sizes="180x180" href="img/favicon.png" type="image/png">
+        <link rel="apple-touch-icon" sizes="180x180" href="img/favicon.png">
+        
+        <meta property="og:title" content="Combine" />
+        <meta property="og:url" content="https://itunes.apple.com/us/app/combine/id1395084295?l=pt&ls=1&mt=8" />
+        <meta property="og:site_name" content="Combine"/>
+        <meta property="og:image" content="img/favicon.png" />
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+    
+        <title> Combine </title>
+    
+        <link rel="stylesheet" type="text/css" href="index.css">
+    
+    </head>
+    
+    <body>
+    <a class="ads" href="">
+        <div id="banner">
+            <!--banner content-->
+            <div class="bot-bg-game">
+                <div class="bot-icon-game"></div>
+                <div class="bot-title-game"></div>
+                <div class="bot-download"></div>
+            </div>
+        </div>
+    </a>
+    
+    <div id="mask">
+        <div id="close">x</div>
+    </div>
+    
+    <a class="ads2" href="">
+        <div id="inter">
+    
+            <!--inter content-->
+            <div class="mid-bg-game">
+                <div class="mid-icon-game"></div>
+                <div class="mid-title-game"></div>
+                <div class="mid-download"></div>
+            </div>
+        </div>
+    </a>
+    
+    <!--<script type = "text/javascript" src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+    <script type = "text/javascript" src = "lib/jquery.min.js"></script>
+    <script type = "text/javascript" src = "lib/phaser.js"></script>
+    <script type = "text/javascript" src = "lib/phaser-state-transition.js"></script>
+    <script type = "text/javascript" src = "lib/FileSaver.js"></script>
+    <script type = "text/javascript" src = "lib/CanvasDye.js"></script>
+    <script type = "text/javascript" src = "index.js"></script>
+    <script type = "text/javascript" src = "lib/webfont.js"></script>
+    <script>
+        WebFont.load({ custom: { families: ['Audiowide-Regular', 'Arvo-Regular'] }});
+    
+        $('.ads').on('click', function() {
+            if (navigator.userAgent.match(/Windows Phone|IEMobile|Lumia/i)) {
+                $(".ads").attr("href", "https://alesefs.github.io/#tapple");
+                $(".ads").attr("target","_blank");
+    
+            } else if (navigator.userAgent.match(/Android/i)) {
+                $(".ads").attr("href", "https://play.google.com/store/apps/details?id=apps.alesefs.com.tapple");
+                $(".ads").attr("target","_blank");
+    
+            } else if (navigator.userAgent.match(/iPhone|iPad|iPod/i)) {
+                $(".ads").attr("href", "https://itunes.apple.com/us/app/tapple/id1385043642?l=pt&ls=1&mt=8");
+                $(".ads").attr("target","_blank");
+    
+            } else {
+                $(".ads").attr("href", "http://alesefs.github.io/#tapple");
+                $(".ads").attr("target","_blank");
+            }
+        });
+    
+        $('.ads2').on('click', function() {
+            if (navigator.userAgent.match(/Windows Phone|IEMobile|Lumia/i)) {
+                $(".ads2").attr("href", "https://alesefs.github.io/");
+                $(".ads2").attr("target","_blank");
+    
+            } else if (navigator.userAgent.match(/Android/i)) {
+                $(".ads2").attr("href", "https://alesefs.github.io/");
+                $(".ads2").attr("target","_blank");
+    
+            } else if (navigator.userAgent.match(/iPhone|iPad|iPod/i)) {
+                $(".ads2").attr("href", "https://alesefs.github.io/");
+                $(".ads2").attr("target","_blank");
+    
+            } else {
+                $(".ads2").attr("href", "http://alesefs.github.io/");
+                $(".ads2").attr("target","_blank");
+            }
+        });
+    
+        $('#close').on('click', function() {
+            $('#mask').css("display", "none");
+            $('#inter').css("display", "none");
+        });
+    
+        $('#mask').on('click', function() {
+            $('#mask').css("display", "none");
+            $('#inter').css("display", "none");
+        });
+    
+        //for images
+        var banImg55 = ['img/ads/TAPPLEban55.png', 'img/ads/AEban55.png'];
+        var banImg95 = ['img/ads/TAPPLEban95.png', 'img/ads/AEban95.png'];
+        var banCor = ['#114EA0', '#111111'];
+        var adsRnd = null;
+    
+        
+        $(document).ready(function(){
+    
+            setInterval(swapImages, 30000);
+    
+            function swapImages(){
+                adsRnd = Math.floor(Math.random() * banCor.length);
+    
+                //banner background image
+                $('.ads').on('click', function() {
+                    if (navigator.userAgent.match(/Windows Phone|IEMobile|Lumia/i)) {
+                        $(".ads").attr("href", "https://alesefs.github.io/");
+                        $(".ads").attr("target","_blank");
+
+                    } else if (navigator.userAgent.match(/Android/i)) {
+                        if (adsRnd == 0) {
+                            $(".ads").attr("href", "https://play.google.com/store/apps/details?id=apps.alesefs.com.tapple");
+                            $(".ads").attr("target","_blank");
+                        } else {
+                            $(".ads").attr("href", "https://alesefs.github.io/");
+                            $(".ads").attr("target","_blank");
+                        }
+
+                    } else if (navigator.userAgent.match(/iPhone|iPad|iPod/i)) {
+                        if (adsRnd == 0) {
+                            $(".ads").attr("href", "https://itunes.apple.com/us/app/tapple/id1385043642?l=pt&ls=1&mt=8");
+                            $(".ads").attr("target","_blank");
+                        } else {
+                            $(".ads").attr("href", "https://alesefs.github.io/");
+                            $(".ads").attr("target","_blank");
+                        }
+
+                    } else {
+                        $(".ads").attr("href", "http://alesefs.github.io/");
+                        $(".ads").attr("target","_blank");
+                    }
+                });
+    
+                
+                //banner background color
+                if (window.innerWidth >= 600) {
+                    $('#banner').css({
+                        'background': '' + banCor[adsRnd] + ' url(' + banImg95[adsRnd] + ') center no-repeat'
+                    });
+                } else {
+                    $('#banner').css({
+                        'background': '' + banCor[adsRnd] + ' url(' + banImg55[adsRnd] + ') center no-repeat'
+                    });
+                }
+                
+            }
+        });
+    </script>
+    
+    </body>
+    
+    </html>

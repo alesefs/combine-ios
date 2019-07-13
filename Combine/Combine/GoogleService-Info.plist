@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>1019233323737-cp5ltjf1afb65socikitndt2njsj4gll.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1019233323737-cp5ltjf1afb65socikitndt2njsj4gll</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>1019233323737-floopc011c4gqu8tpje3ti9lvudmemjk.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDs9kPht7DNMYzjhXY2LCO_-rdhHW1tLFQ</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1019233323737</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>Combine.com.alesefs.apps</string>
+	<key>PROJECT_ID</key>
+	<string>combine-2bc5b</string>
+	<key>STORAGE_BUCKET</key>
+	<string>combine-2bc5b.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1019233323737:ios:bac3ec32dcdb20fe</string>
+	<key>DATABASE_URL</key>
+	<string>https://combine-2bc5b.firebaseio.com</string>
+</dict>
+</plist>
